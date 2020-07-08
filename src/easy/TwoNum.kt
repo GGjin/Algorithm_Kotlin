@@ -25,10 +25,10 @@ import java.util.*
 fun twoSum(nums: IntArray, target: Int): IntArray {
     val map = mutableMapOf<Int, Int>()
     nums.forEachIndexed { index, i ->
-        if (map.containsKey(target - nums[index])) {
-            return intArrayOf(map[target - nums[index]] ?: 0, index)
+        if (map.containsKey(target - i)) {
+            return intArrayOf(map[target - i] ?: 0, index)
         }
-        map[nums[index]] = index
+        map[i] = index
     }
     return intArrayOf(-1, -1)
 }
