@@ -30,18 +30,16 @@ package easy
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    fun isPalindrome(x: Int): Boolean {
-        if (x < 0) {
-            return false
-        }
-        var temp = 0
-        var new = x
-        while (new > 0) {
-            temp = temp * 10 + new % 10
-            new /= 10
-        }
-        return temp == x
+fun isPalindrome(x: Int): Boolean {
+    if (x < 0) {
+        return false
     }
+    var temp = 0
+    var new = x
+    while (new > 0) {
+        temp = temp * 10 + new % 10
+        new /= 10
+    }
+    return temp == x
 }
 //leetcode submit region end(Prohibit modification and deletion)
